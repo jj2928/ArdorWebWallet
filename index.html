@@ -1,0 +1,81 @@
+<html>
+  <script src="./public/jquery-3.4.1.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/trade.js"></script>
+  <script src="./js/settings.js"></script>
+
+  <meta charset="UTF-8">
+
+  <head>
+  	<link rel="stylesheet" type="text/css" href="./css/index.css" />
+  	<title>Koreapool</title>
+  	<div style="width: 100%; margin: auto; text-align: center;">
+  	<h1>Welcome to Koreapool!</h1>
+  	</div>
+  </head>
+  <body style="height: 560px;">
+    <br />
+    <div>
+      <div style="margin: auto; text-align: center;">
+        <button id="tradeId" class="redbutton" style="width:80px;height:80px;">거래</button>
+        <button id="mainId" class="greenbutton" style="width:80px;height:80px;">메인</button>
+        <button id="settingsId" class="yellowbutton" style="width:80px;height:80px;">설정</button>
+      </div>
+
+      <img id="mainLogoId" src="main.png" alt="My Image" style="width: 400px; height:400px; margin: auto; display: block" >
+
+      <div class="target" style="width: 550px; margin: auto; text-align: center">
+      </div>
+      <div class="target2" style="width: 550px; margin: auto; text-align: center">
+      </div>
+        <div id="tradeValue" style="width: 550px; margin: auto; text-align: center; display: none">
+          <br /><br />
+          <div style="text-align: center">
+            체인선택 : <select name="job">
+                      <option value="">선택</option>
+                      <option value="">ARDR</option>
+                      <option value="" selected="selected">IGNIS </option>
+                      </select>
+          </div>
+          <div style="text-align: center;">
+            <h3>※ 입력정보 ※</h3>
+            수취계좌 : <input type="text" name="recipient" id="recipient" placeholder="예) ARDOR-XXXX-XXXX-XXXX-XXXXX" style="width: 300px; text-align: center" value = "ARDOR-KFG2-XBFK-KWJZ-6SZR9" />
+            <br /><br />
+            송금개수 : <input type="text" name="amountNQT" id="amountNQT" placeholder="송금하고자 하는 ARDR 개수" style="width: 300px; text-align: center" value = ""/>
+            <br /><br />
+            &nbsp;&nbsp;메세지 : <input type="text" name="message" id="message" placeholder="전송하고자 하는 메세지 입력" style="width: 300px; text-align: center" value = ""/>
+            <br /><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;서명 : <input type="password" name="secretPhrase" id="secretPhrase" placeholder="개인키를 서명해주세요." style="width: 300px; text-align: center" value = "" />
+            <br /><br />
+            <button id="loadPassphraseId" class=button>※ 불러오기 ※</button>
+
+            <br /><br />
+            <button id="sendArdorId" class=redbutton>※ 송금하기 ※</button>
+
+          </div>
+        </div>
+
+        <div id="settingsValue" style="width: 550px; margin: auto; text-align: center; display: none">
+          <div style="text-align: center;">
+            <h3>※ 개인정보등록 ※</h3>
+              이름 : <input type="text" name="settingsName" id="settingsName" placeholder="예) 조용범" style="width: 300px; text-align: center" />
+              <br /><br />
+              계좌 : <input type="text" name="settingsAccount" id="settingsAccount" placeholder="예) ARDOR-KFG2-XBFK-KWJZ-6SZR9" style="width: 300px; text-align: center" />
+              <br /><br />
+              서명 : <input type="password" name="settingsPassphrase" id="settingsPassphrase" placeholder="예) black cross inch wonder week beneath task anyone mouth asleep nature here" style="width: 500px; text-align: center" />
+              <br /><br />
+            <h3>-----------------------------------------------------------------------------------------------</h3>
+              <br />
+            <h3>※ 간편비밀번호 설정 ※</h3>
+              암호   : <input type="password" name="settingsPassword" id="settingsPassword" style="width: 300px" value = ""/>
+              <br /><br />
+              확인 : <input type="password" name="settingsPassword2" id="settingsPassword2" style="width: 300px" value = ""/>
+              <br /><br />
+            <button id="saveSettingsId" class=redbutton>※ 저장하기 ※</button>
+          </div>
+        </div>
+
+      </div>
+  </body>
+</html>
